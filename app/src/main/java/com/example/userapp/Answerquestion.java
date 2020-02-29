@@ -75,6 +75,7 @@ public class Answerquestion extends AppCompatActivity {
                 answercontentsvalue = answercontents.getText().toString(); //적은 답변내용 가져오기
                 Map<String,Object> update = new HashMap<>();     //해쉬맵을 사용해서 데이터 값을 변경
                 update.put("answercontents",answercontentsvalue);   // "answercontents" 안에 내용을 미답변에서 적은답변내용으로 변경
+                update.put("answer","답변완료");
                 reference.child(existingwriter).updateChildren(update);  //Firbase에 적용
 
 

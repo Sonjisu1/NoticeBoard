@@ -10,6 +10,7 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
+        android:textColor="#0A0A0A"
         android:layout_height="wrap_content"
         android:text="문의 리스트"
         android:textSize="30dp"
@@ -28,10 +29,11 @@
 
         <TextView
             android:layout_weight="0.3"
+            android:textColor="#0A0A0A"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="22dp"
+            android:textSize="20dp"
             android:text="제목"
             android:textStyle="bold">
 
@@ -40,7 +42,8 @@
 
             android:layout_weight="0.7"
             android:gravity="center"
-            android:textSize="22dp"
+            android:textColor="#0A0A0A"
+            android:textSize="18dp"
             android:id="@+id/title1"
             android:background="@drawable/button_design2"
             android:layout_width="wrap_content"
@@ -53,13 +56,15 @@
     <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
 
         <TextView
             android:layout_weight="0.2"
-            android:textSize="22dp"
+            android:textSize="20dp"
+            android:textColor="#0A0A0A"
             android:layout_width="wrap_content"
 
             android:layout_height="wrap_content"
@@ -73,7 +78,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.8"
-            android:textSize="22dp"
+            android:textSize="18dp"
+            android:textColor="#0A0A0A"
 
             android:id="@+id/writer"
             android:gravity="center"
@@ -94,7 +100,9 @@
         <TextView
             android:layout_weight="0.2"
             android:layout_width="wrap_content"
-            android:textSize="22dp"
+            android:textColor="#0A0A0A"
+
+            android:textSize="20dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="작성일"
@@ -104,7 +112,8 @@
         <TextView
             android:layout_weight="0.8"
             android:id="@+id/date"
-            android:textSize="22dp"
+            android:textSize="18dp"
+            android:textColor="#0A0A0A"
             android:gravity="center"
             android:background="@drawable/button_design2"
             android:layout_width="wrap_content"
@@ -119,7 +128,7 @@
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="22dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         android:layout_marginLeft="40dp"
         android:text="내용">
@@ -131,17 +140,18 @@
 
         android:layout_marginTop="20dp"
         android:id="@+id/contents"
+        android:textColor="#0A0A0A"
         android:padding="30dp"
         android:background="@drawable/button_design2"
         android:textSize="22dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"          android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="내요요용"></TextView>
+        android:hint="내용"></TextView>
 
     <TextView
         android:layout_marginTop="20dp"
-        android:textSize="22dp"
+        android:textSize="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
@@ -153,6 +163,7 @@
         android:layout_marginTop="20dp"
         android:id="@+id/answercontents"
         android:padding="50dp"
+        android:textColor="#0A0A0A"
         android:background="@drawable/button_design"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"          android:layout_width="match_parent"
