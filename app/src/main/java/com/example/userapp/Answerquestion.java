@@ -17,6 +17,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Answerquestion extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference reference;
@@ -30,7 +33,7 @@ public class Answerquestion extends AppCompatActivity {
     String answercontentsvalue;
     Button answerbtn; //답변하기버튼
     Button confirmbtn ; //확인버튼
-    String existinganswercontents;
+    String existinganswercontents; //답변내용
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,11 +73,12 @@ public class Answerquestion extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 answercontentsvalue = answercontents.getText().toString(); //적은 답변내용 가져오기
-                Intent intent = new Intent();
+                Map<String,Object> update = new HashMap<>();     //해쉬맵을 사용해서 데이터 값을 변경
+                update.put("answercontents",answercontentsvalue);   // "answercontents" 안에 내용을 미답변에서 적은답변내용으로 변경
+                reference.child(existingwriter).updateChildren(update);  //Firbase에 적용
 
-                intent.putExtra("answercontents",answercontentsvalue); //답변한 내용을 intent를사용하여 보냄
-                setResult(RESULT_OK,intent);
-                finish();
+
+                finish(); //액티비티 종료
 
             }
         });

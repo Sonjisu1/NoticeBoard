@@ -20,9 +20,7 @@ public class QuestionData {
         this.contents=contents;
     }
 
-    public QuestionData(String Answercontents){
-        this.answercontents = Answercontents;
-    }
+
 
 
     public  String getAnswercontents() {

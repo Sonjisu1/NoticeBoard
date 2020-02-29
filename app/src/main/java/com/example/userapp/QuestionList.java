@@ -31,6 +31,14 @@ public class QuestionList extends AppCompatActivity {
     QuestionAdapter adapter;
     RecyclerView recyclerView;
     String answercontents;
+    String title;
+    String writer;
+    String contents;
+    String answer;
+
+
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) { //Answerquestion에서 답변한 내용을 받기 위해서 사용
@@ -91,20 +99,14 @@ public class QuestionList extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),Answerquestion.class); //Answerquestion 화면으로 전환
 
                 QuestionData questionData = list.get(position); //리사이클러뷰 아이템 위치 확보
-                if(answercontents !=null){  //답변내용을 제대로 받았다면
-
-                    questionData.setAnswercontents(answercontents);  //QuestionData에 저장
-                    questionData.setAnswer("답변 완료");
-
-                    intent.putExtra("answercontents",questionData.getAnswercontents()); //Answerquestion에 답변내용을 올리기 위해 데이터 보냄
-
-
-                }
 
                 intent.putExtra("title",questionData.getTitle()); //리사이클러뷰 아이템 클릭 시 기존에 있었던 데이터를
                 //Answerquestion 화면에 보여주기 위해서 데이터를 전달함
-                intent.putExtra("writer",questionData.getWriter());
-                intent.putExtra("contents",questionData.getContents());
+                intent.putExtra("writer",questionData.getWriter()); //작성자
+                intent.putExtra("contents",questionData.getContents());  //내용
+                intent.putExtra("answercontents",questionData.getAnswercontents()); //답변내용
+
+
 
                 startActivityForResult(intent,REQ_ADD_CONTACT);
             }
