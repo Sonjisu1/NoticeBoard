@@ -72,7 +72,7 @@ public class QuestionList extends AppCompatActivity {
 
 
        //firebase에 데이터 가져오기
-       reference.addListenerForSingleValueEvent(new ValueEventListener() {
+       reference.addValueEventListener(new ValueEventListener() {
            @Override
            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                list.clear();
